@@ -1,0 +1,124 @@
+  118  mkdir git-workshop
+  119  cd git-workshop/
+  120  
+  122  git --version
+  123  git config --global user.name "Abhilash Ramteke"
+  124  ls
+  125  
+  126  vi ~/.gitconfig
+  127  git config --global user.email "Abhilashramteke@icloud.com"
+  128  vi ~/.gitconfig
+  129 
+  130  git config --list --show-origin
+  131  git config --list
+
+  117  git init
+  118  ls -a
+  119  git status
+  120  git remote add origin https://github.com/aramteke92/git-workshop.git
+  121  git branch -M main
+  122  git remote add origin https://github.com/aramteke92/git-workshop.git
+  123  git push -u origin main
+  124  git add .
+  125  git commit -m "Initial commit"
+  126  git push
+  127  git push --set-upstream origin main
+  128  
+  129  git add index.html styles.css
+  130  git commit -m 'feat: First Commit'
+  131  git push
+  132  git add .
+  133  git status
+  134  git add fileOne.txt 
+  135  ls -lrt
+  136  git reset fileTwo.txt
+  137  git status 
+  138  clear
+  139  git add .
+  140  git commit -m "File two created"
+  141  git log
+  142  git log --oneline
+  143  git push
+  144  git add .
+  145  git commit -m "File two created"
+  146  git add .
+  147  git commit -m "File two created"
+  148  git push
+  149  git fetch
+  150  git diff main origin/main
+  151  clear
+  152  git diff main origin/main
+  153  git status
+  154  git fetch
+  155  git diff main origin/main
+  156  git pull
+  157  git status
+  158  git diff main origin/main
+  159  git checkout fetch-demo-branch
+  160  git fetch
+  161  git checkout fetch-demo-branch
+  162  clear
+  163  git pull
+  164  git add .
+  165  git commit -m "Push force demo"
+  166  git push
+  167  git push --force "Not preferable option as it deletes remote files and updates"
+  168  git checkout main
+  169  git status
+  170  git checkout . 
+  171  git status
+  172  history
+  173  history > gitImpCmds.txt
+
+  175  git push
+  176  git log
+  177  git add .
+  178  git commit -m "File two update"
+  179  git push
+  180  git branch 
+  181  git checkout -b "cherrypick-demo"
+  182  git checkout main
+  183  ls
+  184  git add .
+  185  git commit -m "Cherrypick demo"
+  186  git log
+  187  git checkout cherrypick-demo 
+  188  git cherry-pick eb9b62fed1a13****************************
+  189  git log
+  190  git checkout main 
+  191  ls
+  192  git reset --hard eb9b62fed1a13***************************
+  193  git log
+  194  ls
+  195  git status 
+  196  git status
+  197  git commit -a
+  198  git status
+  199  git rm cherrypick.txt 
+  200  git status
+  201  git checkout cherrypick-demo 
+  202  ls
+  203  git restore cherrypick.txt
+  204  git status
+  205  git restore --staged cherrypick.txt
+  206  ls
+  207  git status
+  208  git restore cherrypick.txt 
+  209  ls
+  210  git add .
+  211  git commit -m "Restore and add cherrypick"
+  212  git status
+  213  git log 
+  214  git push 
+  215  git push --set-upstream origin cherrypick-demo
+  216  ls
+  217  git checkout main 
+  218  ls
+  219  git checkout main 
+  220  git rm cherrypick.txt 
+  221  git commit -m "remove cherrypick"
+  222  git push 
+  223  ls
+  224  ls ../
+  225  git checkout main 
+  226  
